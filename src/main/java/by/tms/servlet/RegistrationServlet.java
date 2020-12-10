@@ -26,6 +26,7 @@ public class RegistrationServlet extends HttpServlet {
         User user = new User(login, password, name);
         List<User> users = (List<User>) getServletContext().getAttribute("users");
         users.add(user);
+        resp.sendRedirect("/home");
 
         
     }
